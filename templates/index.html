@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Chat</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <div class="container">
+        <h1>LLM Chat Interface</h1>
+
+        <form method="POST">
+            <label for="model-select">Select LLM Model:</label>
+            <select id="model-select" name="model">
+                {% for model in models %}
+                    <option value="{{ model }}" {% if model == selected_model %} selected {% endif %}>{{ model }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="prompt-template">Enter Prompt Template:</label>
+            <textarea id="prompt-template" name="prompt" placeholder="Enter your prompt template here...">{{ prompt_template }}</textarea>
+
+            <label for="user-question">Your Question:</label>
+            <input type="text" id="user-question" name="question" value="{{ user_question }}" placeholder="Type your question...">
+
+            <button type="submit">Get Answer</button>
+        </form>
+
+        {% if answer %}
+            <h3>Answer:</h3>
+            <div class="answer markdown-content">{{ answer | safe }}</div>  <!-- Render Markdown as HTML -->
+        {% endif %}
+    </div>
+</body>
+</html>

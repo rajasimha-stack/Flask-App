@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+select, input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 300px;
+    overflow-y: auto;
+    resize: vertical;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Markdown Formatting */
+.markdown-content {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+    color: #ffd700;
+}
+
+.markdown-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.markdown-content ul {
+    padding-left: 20px;
+}
+
+.markdown-content li {
+    margin-bottom: 5px;
+}
+
+.markdown-content code {
+    background: #1e1e1e;
+    color: #ff9800;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* Style multi-line code blocks */
+pre {
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+pre code {
+    display: block;
+    padding: 5px;
+    color: #fff;
+}
