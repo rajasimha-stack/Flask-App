@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Chat</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>LLM Chat Interface</h1>
+        
+        <label for="model-select">Select LLM Model:</label>
+        <select id="model-select">
+            <option value="">--Choose a model--</option>
+            <option value="llama-3.3-70b-versatile">Llama-3.3-70B Versatile</option>
+            <option value="gemma2-9b-it">Gemma2-9B IT</option>
+            <option value="qwen-2.5-32b">Qwen-2.5-32B</option>
+            <option value="qwen-2.5-coder-32b">Qwen-2.5-Coder-32B</option>
+            <option value="deepseek-r1-distill-qwen-32b">Deepseek-R1-Distill-Qwen-32B</option>
+            <option value="deepseek-r1-distill-llama-70b">Deepseek-R1-Distill-Llama-70B</option>
+        </select>
+        
+        <label for="prompt-template">Prompt Template:</label>
+        <textarea id="prompt-template" readonly></textarea>
+        
+        <label for="user-question">Your Question:</label>
+        <input type="text" id="user-question" placeholder="Type your question...">
+        
+        <button id="submit-btn">Get Answer</button>
+        
+        <div id="loader" class="loader" style="display: none;"></div>
+        
+        <h3>Answer:</h3>
+        <div id="answer"></div>
+    </div>
+</body>
+
+</html>
